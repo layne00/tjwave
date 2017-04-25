@@ -94,7 +94,7 @@ What you need to do is to go to parseText function and modify the text.
 textStream.setEncoding('utf8');
 textStream.on('data', function(str) {
   console.log(' ===== Speech to Text ===== : ' + str); // print each text we receive
-  parseText(str);
+  // parseText(str);
 });
 
 textStream.on('error', function(err) {
@@ -107,8 +107,6 @@ function parseText(str){
   var introduceYourself = str.indexOf("introduce") >= 0 && str.indexOf("yourself") >= 0  ;
   var whatisYourname = str.indexOf("what") >= 0 && str.indexOf("your") >= 0 && str.indexOf("name") >= 0  ;
   var canYouDance = str.indexOf("can") >= 0 && str.indexOf("you") >= 0 && str.indexOf("dance") >= 0  ;
-
-
   if (containsWaveArm) {
     speak("Ok, I will wave my arm. Just for you.");
     waveArm("wave") ;
@@ -123,8 +121,6 @@ function parseText(str){
       speak("sorry, I haven't been taught to understand that.")
     }
   }
-
-
 }
 
 /*********************************************************************

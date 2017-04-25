@@ -64,7 +64,7 @@ var colorPalette = {
 }
 
 
-launcLED();
+// launcLED();
 
 function launcLED() {
     setInterval(function() {
